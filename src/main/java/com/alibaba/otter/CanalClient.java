@@ -63,7 +63,7 @@ public class CanalClient {
           }
           connector.ack(batchId);
  
-          //当队列里面堆积的sql大于一定数值的时候就模拟执行
+          //当队列里面堆积的sql大于一定数值的时 候就模拟执行
           if (SQL_QUEUE.size() >= 1) {
             executeQueueSql();
           }
