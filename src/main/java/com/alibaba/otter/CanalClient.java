@@ -104,7 +104,7 @@ public class CanalClient {
         EventType eventType = rowChange.getEventType();
         if (eventType == EventType.DELETE) {
           saveDeleteSql(entry);
-          getdelBeforSql(entry);
+//          getdelBeforSql(entry);
         }
         else if (eventType == EventType.UPDATE) {
           saveUpdateSql(entry);
@@ -244,7 +244,7 @@ public class CanalClient {
         }
         sql.append(");");
         logger.info("canal adapter 接收到消息: "+EventType.DELETE+"{[" + sql.toString()+"]}");
-        String fileName = "/Users/wbq/SoftWare/canal/canal-tcp/canal-adapter/canal.sample/logs/sql.txt";
+        String fileName = "/logs/sql.txt";
         method2(fileName,sql.toString());
 //        SQL_QUEUE.add(sql.toString());
       }
