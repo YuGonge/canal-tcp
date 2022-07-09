@@ -41,7 +41,7 @@ public class CanalClient {
    */
   public void run() {
 
-    // 创建链接
+    // 创建 gi链接
     CanalConnector connector = CanalConnectors.newSingleConnector(new InetSocketAddress(AddressUtils.getHostIp(),
             11111), "example", "", "");
     int batchSize = 1000;
